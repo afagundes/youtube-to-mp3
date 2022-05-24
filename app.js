@@ -5,7 +5,7 @@ const fs = require('fs');
 
 const args = process.argv.slice(2);
 
-if (args.length <= 1) {
+if (args.length == 0) {
     console.log("usage: app.js <YOUTUBE URL> [-o <OUTPUT PATH.mp3>]");
     process.exit(1);
 }

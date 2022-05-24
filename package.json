@@ -1,0 +1,14 @@
+{
+  "name": "youtube-to-mp3",
+  "version": "1.0.0",
+  "description": "Save Youtube audio as mp3",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Archimedes Fagundes Junior",
+  "license": "ISC",
+  "dependencies": {
+    "youtube-audio-stream": "^0.3.61"
+  }
+}

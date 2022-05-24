@@ -30,14 +30,15 @@ const videoUri = args[0];
 const output = getOutputPath(args);
 
 const downloadStream = async () => {
-    console.log(`Extracting audio from ${videoUri}`);    
+    console.log(`Extracting audio from ${videoUri}`);
+
     const writeStream = fs.createWriteStream(output);
+    writeStream.on('finish', () => console.log(`File saved to ${output}`));
 
     for await (chunk of stream(videoUri)) {
         writeStream.write(chunk);
     }
 
-    writeStream.on('finish', () => console.log(`File saved to ${output}`));
     writeStream.end();
 }
 
